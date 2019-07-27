@@ -15,6 +15,22 @@
             font-size: 60px;
         }
 
+        .header {
+            position: fixed;
+            display: flex;
+            height: 350px;
+            width: 100%;
+            background: aqua
+        }
+
+        .section {
+            padding: 50px;
+            padding-left: 30%;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            color: brown;
+
+        }
+
         .button {
             padding: 25px;
             height: 100px;
@@ -26,7 +42,6 @@
             font-size: 18px;
             text-align: center;
             color: beige;
-            
 
 
 
@@ -48,11 +63,11 @@
 </head>
 
 <body style="margin: 0%; padding: 0%">
-    <div style="display: flex; height: 350px; width: 100%; background: aqua">
+    <div class="header">
         <div style="height: 350px; width: 300px; background: blueviolet">
             <img src="MyPic.jpg" style="width: 220px; height: 300px; border-radius: 10%; padding: 50px">
         </div>
-        <div style="width: 100%; padding-top: 80px"> 
+        <div style="width: 100%; padding-top: 80px">
             <div style="background: rgb(247, 177, 131);">
                 <button class="button">ABOUT</button>
                 <button class="button">EDUCATION</button>
@@ -64,31 +79,73 @@
 
             <div style="display: flex">
                 <div>
-                    <div style="font-family: sans-serif; text-align:center; font-size: 60px; font-weight: bolder; padding: 20px ">
-                    AYUSHI
+                    <div
+                        style="font-family: sans-serif; text-align:center; font-size: 60px; font-weight: bolder; padding: 20px ">
+                        AYUSHI
                     </div>
-                    <div style="font-family: sans-serif; text-align:left; font-size: 15px; font-weight: bolder; padding-left: 25px"> 
+                    <div
+                        style="font-family: sans-serif; text-align:left; font-size: 15px; font-weight: bolder; padding-left: 25px">
                         +91 9650250998
                     </div>
-                    <div style="font-family: sans-serif; text-align:left; font-size: 15px; font-weight: bolder; padding-left: 25px">
+                    <div
+                        style="font-family: sans-serif; text-align:left; font-size: 15px; font-weight: bolder; padding-left: 25px">
                         ayushi.bajpai1111@gmail.com
                     </div>
                 </div>
-            <div style="text-align: end; margin-top:40px; margin-left: 600px;">
-                <a href="https://www.linkedin.com/in/ayushi-bajpai-11b349159/" target="_blank">
-                    <i class="fab fa-linkedin-in Icon"></i>
-                </a>
-                <a href="https://github.com/ayushi59" target="_blank">
-                    <i class="fab fa-github Icon"></i>
-                </a>
-                <a href="https://www.facebook.com/profile.php?id=100020069289255" target="_blank">
-                    <i class="fab fa-facebook-f Icon"></i>
-                </a>
-            </div>
+                <div style="text-align: end; margin-top:40px; margin-left: 600px;">
+                    <a href="https://www.linkedin.com/in/ayushi-bajpai-11b349159/" target="_blank">
+                        <i class="fab fa-linkedin-in Icon"></i>
+                    </a>
+                    <a href="https://github.com/ayushi59" target="_blank">
+                        <i class="fab fa-github Icon"></i>
+                    </a>
+                    <a href="https://www.facebook.com/profile.php?id=100020069289255" target="_blank">
+                        <i class="fab fa-facebook-f Icon"></i>
+                    </a>
+                </div>
             </div>
         </div>
 
     </div>
+
+    <div style="padding-top: 500px">
+        <div class="section" id="about">
+            <p>I am a work enthusiast.</p>
+        </div>
+        <div class="section" id="edu">
+            <p style="font-size: 30px">EDUCATION </p>
+            <p style="padding-left: 10px">Maharaja Surajmal Institute of Technology, New Delhi</p>
+            <p style="padding-left: 25px">B.Tech Information Technology<br></p>
+            <p style="padding-left: 25px">GPA: 9.17 (till sem II)<br></p>
+
+            <p style="padding-left: 10px">KV Pushp Vihar, New Delhi [CBSE]</p>
+            <p style="padding-left: 25px">XII Science stream<br></p>
+            <p style="padding-left: 25px">90.4%<br></p>
+
+            <p style="padding-left: 10px">KV Pushp Vihar, New Delhi [CBSE]</p>
+            <p style="padding-left: 25px">X<br></p>
+            <p style="padding-left: 25px">10 CGPA<br></p>
+
+        </div>
+
+        <div class="section" id="skills">
+            <p style="font-size: 30px">SKILLS </p>
+            <p style="padding-left: 10px">Full-stack web developer working currently on node.js, MongoBD, HTML, JS,
+                CSS<br><br>
+                Proficiency in C and C++<br><br>
+                Highly comfortable with team-work<br><br>
+                Good on sharing and imbibing knowledge </p>
+        </div>
+
+        <div class="section" id="exp">
+            <p style="font-size: 30px">EXPERIENCE </p>
+            <p style="padding-left: 10px">Currently interning with Chefier solution under their Skillfreaks
+                wing<br><br>
+                Currently developing self-project on WebD</p>
+        </div>
+    </div>
+
+
 
 </body>
 
