@@ -1,4 +1,4 @@
-<html>
+<html>  
 
 <head>
     <meta name="viewport" content="width=device-width">
@@ -6,21 +6,20 @@
     <style>
         .Icon {
             font-size: 40px;
-            color: coral;
+            color: rgb(252, 174, 200);
             padding: 25px;
         }
-
         .Icon:hover {
             color: blue;
-            font-size: 60px;
+            font-size: 42px;
         }
 
         .header {
             position: fixed;
             display: flex;
-            height: 350px;
+            height: 280px;
             width: 100%;
-            background: aqua
+            background: coral;
         }
 
         .section {
@@ -42,9 +41,9 @@
             font-size: 18px;
             text-align: center;
             color: beige;
-
-
-
+        }
+        .button:hover {
+            color: black;
         }
 
         #a {
@@ -64,19 +63,20 @@
 
 <body style="margin: 0%; padding: 0%">
     <div class="header">
-        <div style="height: 350px; width: 300px; background: blueviolet">
-            <img src="MyPic.jpg" style="width: 220px; height: 300px; border-radius: 10%; padding: 50px">
+        <div style="height: 250px; width: 300px;">
+            <img src="MyPic.jpg"
+                style="width: 200px; height: 250px; border-radius: 20%; padding: 50px; padding-top: 25px">
         </div>
-        <div style="width: 100%; padding-top: 80px">
+        <div style="width: 100%; padding-top: 30px">
             <div style="background: rgb(247, 177, 131);">
-                <button class="button">ABOUT</button>
-                <button class="button">EDUCATION</button>
-                <button class="button">SKILLS</button>
-                <button class="button">EXPERIENCE</button>
-                <button class="button" style="width: 180px">ACHIEVEMENTS</button>
-                <button class="button" style="width: 300px">HOBBIES & INTERESTS</button>
-            </div>
-
+                <button class="button" onclick="smoothScroll('about')">ABOUT</button>
+                <button class="button" onclick="smoothScroll('edu')">EDUCATION</button>
+                <button class="button" onclick="smoothScroll('skills')">SKILLS</button>
+                <button class="button" onclick="smoothScroll('exp')">EXPERIENCE</button>
+                <button class="button" style="width: 180px" onclick="smoothScroll('achieve')">ACHIEVEMENTS</button>
+                <button class="button" style="width: 300px" onclick="smoothScroll('hobbies')">HOBBIES &
+                    INTERESTS</button>
+            </div>                
             <div style="display: flex">
                 <div>
                     <div
@@ -105,29 +105,23 @@
                 </div>
             </div>
         </div>
-
     </div>
-
-    <div style="padding-top: 500px">
+    <div style="padding-top: 300px">
         <div class="section" id="about">
             <p>I am a work enthusiast.</p>
         </div>
         <div class="section" id="edu">
             <p style="font-size: 30px">EDUCATION </p>
             <p style="padding-left: 10px">Maharaja Surajmal Institute of Technology, New Delhi</p>
-            <p style="padding-left: 25px">B.Tech Information Technology<br></p>
+            <p style="padding-left: 25px">Pursuing B.Tech in Information Technology<br></p>
             <p style="padding-left: 25px">GPA: 9.17 (till sem II)<br></p>
-
             <p style="padding-left: 10px">KV Pushp Vihar, New Delhi [CBSE]</p>
             <p style="padding-left: 25px">XII Science stream<br></p>
             <p style="padding-left: 25px">90.4%<br></p>
-
             <p style="padding-left: 10px">KV Pushp Vihar, New Delhi [CBSE]</p>
             <p style="padding-left: 25px">X<br></p>
             <p style="padding-left: 25px">10 CGPA<br></p>
-
         </div>
-
         <div class="section" id="skills">
             <p style="font-size: 30px">SKILLS </p>
             <p style="padding-left: 10px">Full-stack web developer working currently on node.js, MongoBD, HTML, JS,
@@ -136,17 +130,67 @@
                 Highly comfortable with team-work<br><br>
                 Good on sharing and imbibing knowledge </p>
         </div>
-
         <div class="section" id="exp">
             <p style="font-size: 30px">EXPERIENCE </p>
             <p style="padding-left: 10px">Currently interning with Chefier solution under their Skillfreaks
                 wing<br><br>
                 Currently developing self-project on WebD</p>
         </div>
+        <div class="section" id="achieve">
+            <p style="font-size: 30px">ACHIEVEMENTS</p>
+            <p style="padding-left: 10px">Won cash prize of INR 5000 for securing 10 CGPA in class X by KVS<br><br>
+                Won cash prize of INR 5000 for cluster-level Budding Scientist competition held by HRD ministry<br><br>
+                Regional level debator in KVS annual debate competition<br><br>
+                Led school team to second position in state level Youth Parliament competition and secured first
+                position
+                individually in the team </p>
+        </div>
+        <div class="section" id="hobbies">
+            <p style="font-size: 30px">HOBBIES & INTERESTS</p>
+            <p style="padding-left: 10px">A travel enthusiast who loves to read history through old fort walls and
+                explore wildlife<br><br>
+                Love to read about entrepreneurs and keep myself updated with tech magazines<br><br>
+                An amatuer photographer<br><br>
+                Love to learn nurture my graphic designing and photography skills</p>
+        </div>
     </div>
 
-
-
+    <script>
+            var smoothScroll = function (elementId) {
+                var MIN_PIXELS_PER_STEP = 500;
+                var MAX_SCROLL_STEPS = 30;
+                var target = document.getElementById(elementId);
+                var scrollContainer = target;
+                do {
+                    scrollContainer = scrollContainer.parentNode;
+                    if (!scrollContainer) return;
+                    scrollContainer.scrollTop += 1;
+                } while (scrollContainer.scrollTop == 0);
+    
+                var targetY = -200; 
+                do {
+                    if (target == scrollContainer) break;
+                    targetY += target.offsetTop;
+                } while (target = target.offsetParent);
+    
+                var pixelsPerStep = Math.max(MIN_PIXELS_PER_STEP,
+                    (targetY - scrollContainer.scrollTop) / MAX_SCROLL_STEPS);
+    
+                var stepFunc = function () {
+                    scrollContainer.scrollTop =
+                        Math.min(targetY, pixelsPerStep + scrollContainer.scrollTop);
+    
+                    if (scrollContainer.scrollTop >= targetY) {
+                        return;
+                    }
+    
+                    window.requestAnimationFrame(stepFunc);
+                };
+    
+                window.requestAnimationFrame(stepFunc);
+            }
+    
+        </script>
 </body>
 
 </html>
