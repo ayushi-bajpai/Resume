@@ -1,0 +1,125 @@
+.Icon {
+    font-size: 40px;
+    color: rgb(252, 174, 200);
+    padding: 25px;
+}
+
+.Icon:hover {
+    color: blue;
+    font-size: 42px;
+}
+
+.Icon2{
+    font-size: 30px;
+    color: rgb(252, 174, 200);
+    padding: 5px;
+}
+
+.Icon2:hover{
+    font-size: 22px;
+    color: blue;
+}
+
+.header {
+    position: fixed;
+    display: flex;
+    height: 280px;
+    width: 100%;
+    background: coral;
+}
+
+.alternateHeader {
+    display: none;
+    position: fixed;
+    height: 100px;
+    width: 100%;
+    background: coral;
+}
+
+.section {
+    padding: 50px;
+    padding-left: 30%;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: brown;
+
+}
+
+.top {
+    padding-top: 300px;
+}
+
+.button {
+    padding: 5px;
+    height: 100px;
+    width: 160px;
+    background: rgb(247, 177, 131);
+    border: none;
+    font-family: sans-serif;
+    font-weight: bolder;
+    font-size: 18px;
+    text-align: center;
+    color: beige;
+}
+
+.button1{
+    width: 180px
+}
+.button2{
+    width: 160px
+}
+
+.button:hover {
+    color: black;
+}
+
+.info2{
+    display: none;
+}
+
+
+
+@media (max-width: 700px) {
+
+    .section {
+        padding-left: 5%;
+    }
+
+    .header{
+        display: none;
+    }
+
+    .alternateHeader {
+        display: block;
+    }
+
+    .top {
+        padding-top: 100px;
+    }
+
+    .pic {
+        display: none;
+    }
+    .info2{
+        display: block;
+    }
+    .info1{
+        display: none;
+    }
+    .button {
+    padding: 5px;
+    height: 20px;
+    width: 100px;
+    background: rgb(247, 177, 131);
+    border: none;
+    font-family: sans-serif;
+    font-weight: bolder;
+    font-size: 15px;
+    text-align: center;
+    color: beige;
+    }
+
+    .button:hover {
+    color: black;
+}
+
+}

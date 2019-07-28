@@ -1,71 +1,17 @@
-<html>  
+<html>
 
 <head>
     <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="../style/style.css">
+    <script src="../script/script.js"></script>
     <script src="https://kit.fontawesome.com/ecb4e5bc3f.js"></script>
-    <style>
-        .Icon {
-            font-size: 40px;
-            color: rgb(252, 174, 200);
-            padding: 25px;
-        }
-        .Icon:hover {
-            color: blue;
-            font-size: 42px;
-        }
-
-        .header {
-            position: fixed;
-            display: flex;
-            height: 280px;
-            width: 100%;
-            background: coral;
-        }
-
-        .section {
-            padding: 50px;
-            padding-left: 30%;
-            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-            color: brown;
-
-        }
-
-        .button {
-            padding: 25px;
-            height: 100px;
-            width: 160px;
-            background: rgb(247, 177, 131);
-            border: none;
-            font-family: sans-serif;
-            font-weight: bolder;
-            font-size: 18px;
-            text-align: center;
-            color: beige;
-        }
-        .button:hover {
-            color: black;
-        }
-
-        #a {
-            width: 1000px;
-            height: 1000px;
-            background: blue
-        }
-
-        @media (min-width: 600px) and (max-width: 800px) {
-            #a {
-                width: 500px;
-                background: yellow;
-            }
-        }
-    </style>
 </head>
 
 <body style="margin: 0%; padding: 0%">
     <div class="header">
-        <div style="height: 250px; width: 300px;">
-            <img src="MyPic.jpg"
-                style="width: 200px; height: 250px; border-radius: 20%; padding: 50px; padding-top: 25px">
+        <div style="height: 250px; width: 300px;" class="pic">
+            <img src="../others/MyPic.jpg"
+                style="width: 150px; height: 200px; padding: 20px; padding-right: 0px; padding-top: 25px">
         </div>
         <div style="width: 100%; padding-top: 30px">
             <div style="background: rgb(247, 177, 131);">
@@ -73,12 +19,11 @@
                 <button class="button" onclick="smoothScroll('edu')">EDUCATION</button>
                 <button class="button" onclick="smoothScroll('skills')">SKILLS</button>
                 <button class="button" onclick="smoothScroll('exp')">EXPERIENCE</button>
-                <button class="button" style="width: 180px" onclick="smoothScroll('achieve')">ACHIEVEMENTS</button>
-                <button class="button" style="width: 300px" onclick="smoothScroll('hobbies')">HOBBIES &
-                    INTERESTS</button>
-            </div>                
+                <button class="button button1" onclick="smoothScroll('achieve')">ACHIEVEMENTS</button>
+                <button class="button button2" onclick="smoothScroll('hobbies')">HOBBIES</button>
+            </div>
             <div style="display: flex">
-                <div>
+                <div class="info1">
                     <div
                         style="font-family: sans-serif; text-align:center; font-size: 60px; font-weight: bolder; padding: 20px ">
                         AYUSHI
@@ -92,7 +37,13 @@
                         ayushi.bajpai1111@gmail.com
                     </div>
                 </div>
-                <div style="text-align: end; margin-top:40px; margin-left: 600px;">
+                <div class="info2">
+                    <p style="padding-left: 20px; font-weight: bold">AYUSHI<br>
+                        +91 96502 50998<br>
+                        ayushi.bajpai1111@gmail.com</p>
+                </div>
+
+                <div style="text-align: end; margin-top:40px; margin-left: 500px;">
                     <a href="https://www.linkedin.com/in/ayushi-bajpai-11b349159/" target="_blank">
                         <i class="fab fa-linkedin-in Icon"></i>
                     </a>
@@ -106,9 +57,35 @@
             </div>
         </div>
     </div>
-    <div style="padding-top: 300px">
+
+    <div class="alternateHeader">
+        <div style="display: flex">
+            <div>
+                <p style="padding-left: 20px; font-weight: bold">AYUSHI<br>
+                    +91 96502 50998<br>
+                    ayushi.bajpai1111@gmail.com</p>
+            </div>
+            <div style="margin-top: 20px; margin-left: 80px">
+                <a href="https://www.linkedin.com/in/ayushi-bajpai-11b349159/" target="_blank">
+                    <i class="fab fa-linkedin-in Icon2"></i>
+                </a>
+                <a href="https://github.com/ayushi59" target="_blank">
+                    <i class="fab fa-github Icon2"></i>
+                </a>
+                <a href="https://www.facebook.com/profile.php?id=100020069289255" target="_blank">
+                    <i class="fab fa-facebook-f Icon2"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="top">
         <div class="section" id="about">
-            <p>I am a work enthusiast.</p>
+            <p>I am currently in my third year pursuing B.Tech in IT<br>
+                I am training in full-stack Web Developement currently and honing my coding skills to <br>make them more optimized and
+                developing projects.<br>
+                Looking for internships now in order to imbibe more knowledge from industry and give whatever I know
+                back to the field <br>
+            </p>
         </div>
         <div class="section" id="edu">
             <p style="font-size: 30px">EDUCATION </p>
@@ -124,7 +101,8 @@
         </div>
         <div class="section" id="skills">
             <p style="font-size: 30px">SKILLS </p>
-            <p style="padding-left: 10px">Full-stack web developer working currently on node.js, MongoBD, HTML, JS,
+            <p style="padding-left: 10px">Training in full-stack web development currently on node.js, MongoBD, HTML,
+                JS,
                 CSS<br><br>
                 Proficiency in C and C++<br><br>
                 Highly comfortable with team-work<br><br>
@@ -139,7 +117,8 @@
         <div class="section" id="achieve">
             <p style="font-size: 30px">ACHIEVEMENTS</p>
             <p style="padding-left: 10px">Won cash prize of INR 5000 for securing 10 CGPA in class X by KVS<br><br>
-                Won cash prize of INR 5000 for cluster-level Budding Scientist competition held by HRD ministry<br><br>
+                Won cash prize of INR 5000 for cluster-level Budding Scientist competition held by HRD
+                ministry<br><br>
                 Regional level debator in KVS annual debate competition<br><br>
                 Led school team to second position in state level Youth Parliament competition and secured first
                 position
@@ -154,43 +133,6 @@
                 Love to learn nurture my graphic designing and photography skills</p>
         </div>
     </div>
-
-    <script>
-            var smoothScroll = function (elementId) {
-                var MIN_PIXELS_PER_STEP = 500;
-                var MAX_SCROLL_STEPS = 30;
-                var target = document.getElementById(elementId);
-                var scrollContainer = target;
-                do {
-                    scrollContainer = scrollContainer.parentNode;
-                    if (!scrollContainer) return;
-                    scrollContainer.scrollTop += 1;
-                } while (scrollContainer.scrollTop == 0);
-    
-                var targetY = -200; 
-                do {
-                    if (target == scrollContainer) break;
-                    targetY += target.offsetTop;
-                } while (target = target.offsetParent);
-    
-                var pixelsPerStep = Math.max(MIN_PIXELS_PER_STEP,
-                    (targetY - scrollContainer.scrollTop) / MAX_SCROLL_STEPS);
-    
-                var stepFunc = function () {
-                    scrollContainer.scrollTop =
-                        Math.min(targetY, pixelsPerStep + scrollContainer.scrollTop);
-    
-                    if (scrollContainer.scrollTop >= targetY) {
-                        return;
-                    }
-    
-                    window.requestAnimationFrame(stepFunc);
-                };
-    
-                window.requestAnimationFrame(stepFunc);
-            }
-    
-        </script>
 </body>
 
 </html>
